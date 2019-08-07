@@ -11,6 +11,9 @@ class ConanFileInstaller(ConanFileBase):
 
     settings = "os_build", "arch_build", "compiler", "arch"
 
+    def build_requirements(self):
+        self.build_requires("cmake_installer/3.15.1@conan/stable")
+
     def requirements(self):
         self.requires.add("protobuf/{}@bincrafters/stable".format(self.version), private=True)
 

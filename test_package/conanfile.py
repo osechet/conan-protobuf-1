@@ -5,6 +5,7 @@ from conans import ConanFile, CMake, tools
 class TestPackageConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     generators = "cmake"
+    requires = "cmake_installer/3.15.1@conan/stable"
 
     def build(self):
         cmake = CMake(self)

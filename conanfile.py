@@ -35,6 +35,9 @@ class ConanFileDefault(ConanFileBase):
                 raise ConanInvalidConfiguration("On Windows, the protobuf/3.6.x package can only be built with the "
                                            "Visual Studio 2015 or higher.")
 
+    def build_requirements(self):
+        self.build_requires("cmake_installer/3.15.1@conan/stable")
+
     def requirements(self):
         if self.options.with_zlib:
             self.requires("zlib/1.2.11@conan/stable")

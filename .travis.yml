@@ -76,9 +76,9 @@ matrix:
       - stage: default
         <<: *linux
         env: CONAN_CLANG_VERSIONS=6.0 CONAN_DOCKER_IMAGE=conanio/clang60 CONAN_ARCHS=x86_64
-      - stage: default
-        <<: *linux
-        env: CONAN_CLANG_VERSIONS=7.0 CONAN_DOCKER_IMAGE=conanio/clang7 CONAN_ARCHS=x86
+      # - stage: default
+      #   <<: *linux
+      #   env: CONAN_CLANG_VERSIONS=7.0 CONAN_DOCKER_IMAGE=conanio/clang7 CONAN_ARCHS=x86
       - stage: default
         <<: *linux
         env: CONAN_CLANG_VERSIONS=7.0 CONAN_DOCKER_IMAGE=conanio/clang7 CONAN_ARCHS=x86_64
