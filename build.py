@@ -17,5 +17,5 @@ if __name__ == "__main__":
         builder.add({"os": build_shared.get_os(), "arch_build": arch, "arch": arch}, {}, {}, {})
         builder.run()
     else:
-        builder = build_template_default.get_builder(docker_entry_script=docker_entry_script, shared_option_name=False, pure_c=False)
+        builder = build_template_default.get_builder(docker_entry_script=docker_entry_script, pure_c=False)
         builder.run()
